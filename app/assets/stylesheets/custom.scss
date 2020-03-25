@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i&display=swap');
+
+$global-color: #b57540 !default;
+$global-background: #eccfc7 !default;
+$global-muted-background: #eccfc7 !default;
+$global-secondary-background: #fff !default;
+
+$global-font-family: 'Lora', serif !default;
+
+h1{
+    font-style: italic;
+    font-weight: 700;
+}
+
+.uk-divider-color-default{
+    border-bottom: 1px solid #b57540;
+}
+
+.nav {
+    z-index: 99;
+}
+
+.uk-navbar-item {
+    color: $global-secondary-background !important;
+}
+
+.hero-small {
+    min-height: calc(15vh) !important;
+    background-position: 50% 30% !important;
+}
