@@ -1,0 +1,5 @@
+<ul> 
+    <% @gallery.images.each do |i| %>
+        <li><%= image_tag i.variant(resize: "200x200" )%><%= link_to 'Delete', gallery_images_path(@gallery, i), action: "delete"%></li>
+    <% end %>
+</ul>
