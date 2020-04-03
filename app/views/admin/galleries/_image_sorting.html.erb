@@ -1,0 +1,8 @@
+<ul id="gallery-images" class="sort-me" data-url="<%= gallery_sort_images_path(@gallery) %>">
+  <% @gallery.images.order(:position).each do |image| %>
+    <li id="<%= dom_id(image) %>" class="ui-state-default uk-card">
+      <%= image_tag image.variant(combine_options: {auto_orient: true, thumbnail: '200x200^', gravity: 'center', extent: '200x200' }) %>
+      <%# link_to "Delete", delete_image_admin_products_path(@product.id, attachment.id), method: :delete, class: "btn btn-xs", data: {confirm: "Are you sure?"} %>
+    </li>
+  <% end %>
+</ul>

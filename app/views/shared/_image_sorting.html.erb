@@ -1,8 +1,0 @@
-<div id="gallery-images" class="sort-me" data-url="<%= sort_attachments_admin_products_path %>">
-  <% @product.images.order(:position).each do |attachment| %>
-    <div id="<%= dom_id(attachment) %>" class="ui-state-default image-box">
-      <%= image_tag attachment.variant(combine_options: {auto_orient: true, thumbnail: '200x200^', gravity: 'center', extent: '200x200' }) %>
-      <%= link_to "Delete", delete_image_admin_products_path(@product.id, attachment.id), method: :delete, class: "btn btn-xs", data: {confirm: "Are you sure?"} %>
-    </div>
-  <% end %>
-</div>

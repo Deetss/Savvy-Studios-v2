@@ -23,7 +23,7 @@ ActiveAdmin.register Gallery do
     inputs do
       input :images, as: :file, input_html: { multiple: true, accept: "image/png, image/gif, image/jpeg" }
     end
-    if f.object.images
+    if f.object.images.any?
       render "image_sorting"
     end
     para "Press cancel to return to the list without saving."
@@ -33,8 +33,6 @@ ActiveAdmin.register Gallery do
 
   show do 
     h3 gallery.title
-    div do
-      render 'gallery_images', { gallery: gallery }
-    end
+    render 'gallery_images', { gallery: gallery }
   end
 end
