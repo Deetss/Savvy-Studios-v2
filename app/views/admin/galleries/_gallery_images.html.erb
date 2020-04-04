@@ -1,5 +1,0 @@
-<ul> 
-    <% @gallery.images.order(:position).each do |i| %>
-        <li><%= image_tag i.variant(resize: "200x200" )%><%= link_to 'Delete', gallery_remove_image_path(:gallery_id => @gallery, :id => i), action: :delete %></li>
-    <% end %>
-</ul>

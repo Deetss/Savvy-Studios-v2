@@ -1,8 +1,11 @@
-<ul id="gallery-images" class="sort-me" data-url="<%= gallery_sort_images_path(@gallery) %>">
+<%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js' %>
+<div id="gallery-images" class="sort-me" data-url="<%= gallery_sort_images_path(@gallery) %>">
   <% @gallery.images.order(:position).each do |image| %>
-    <li id="<%= dom_id(image) %>" class="ui-state-default uk-card">
+    <div id="<%= dom_id(image) %>" class="ui-state-default">
       <%= image_tag image.variant(combine_options: {auto_orient: true, thumbnail: '200x200^', gravity: 'center', extent: '200x200' }) %>
-      <%# link_to "Delete", delete_image_admin_products_path(@product.id, attachment.id), method: :delete, class: "btn btn-xs", data: {confirm: "Are you sure?"} %>
-    </li>
+      <div class="uk-overlay uk-position-top">
+        <%= link_to '', gallery_remove_image_path(:gallery_id => @gallery, :id => image), method: :delete, "uk-icon": "icon: trash; ratio: 2", class: "uk-link-primary" %>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>

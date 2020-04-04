@@ -18,13 +18,14 @@ ActiveAdmin.register Gallery do
   form do |f|
     inputs 'Details' do
       input :title
+      input :description
       li "Created at #{f.object.created_at}" unless f.object.new_record?
     end
     inputs do
       input :images, as: :file, input_html: { multiple: true, accept: "image/png, image/gif, image/jpeg" }
     end
     if f.object.images.any?
-      render "image_sorting"
+      render "image_sorting", { can_delete: true}
     end
     para "Press cancel to return to the list without saving."
     actions
@@ -32,7 +33,7 @@ ActiveAdmin.register Gallery do
   
 
   show do 
-    h3 gallery.title
-    render 'gallery_images', { gallery: gallery }
+    h4 "Drag and Drop to sort", class:"uk-heading-small"
+    render 'image_sorting', { gallery: gallery }
   end
 end
