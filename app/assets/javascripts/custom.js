@@ -1,4 +1,5 @@
 document.addEventListener("turbolinks:load", function() {
+    $('.lightbox').featherlight(configuration = {});
 
 // this function runs every time you are scrolling
     $(window).scroll(function() {

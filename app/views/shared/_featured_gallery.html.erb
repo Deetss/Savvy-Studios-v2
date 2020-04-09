@@ -4,7 +4,7 @@
   <div class="card-columns" > 
     <% @gallery.images.order(:position).each do |image| %>
       <div class="card border-0">
-          <a href="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' })) %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid"></a>
+          <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
       </div>
     <% end %>
   </div>
