@@ -10,9 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require "uikit"
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require rails-ujs
-//= require jquery
 //= require jquery-ui
 //= require activestorage
 //= require turbolinks

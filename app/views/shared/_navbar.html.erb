@@ -1,28 +1,17 @@
-<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-    <nav class="uk-visible@s nav uk-navbar-container uk-navbar-transparent uk-margin-auto uk-padding-small uk-padding-remove-left uk-padding-remove-right uk-position-top-center uk-text-large" uk-navbar>
-        <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav">
-                <li>
-                    <%= link_to 'About Me', '#', class:"uk-navbar-item" %>
-                </li>
-                <li>
-                    <%= link_to 'Gallery', '#', class:"uk-navbar-item" %>
-                </li>
-                <%= image_tag 'logo.png', class: "uk-logo" %>
-                <li>
-                    <%= link_to 'Shop', '#', class:"uk-navbar-item" %>
-                </li>
-                <li>
-                    <%= link_to 'Contact Me', '#', class:"uk-navbar-item" %>
-                </li>
-            </ul>
-            </div></div>
-        </div>
-        <div class="uk-navbar-left uk-hidden@s">
-            <a class="uk-navbar-toggle uk-link-primary" href="#">
-                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left"><%= image_tag 'logo.png', class: "uk-logo", width: "50%" %></span>
-            </a>
-        </div>
-    </nav>
-</div>
+<nav class="navbar navbar-expand-lg fixed-top bg-gradient-dark">
+  <%= link_to root_path, class: "navbar-brand d-lg-none m-auto" do %>
+    <%= image_tag 'logo.png', class: "img-fluid" %>
+  <% end %>
+    <ul class="nav m-auto flex-row justify-content-between align-items-center">
+      <li class="nav-item"><%= link_to 'About Me', '#', class:"nav-link text-secondary" %></li>
+      <li class="nav-item"><%= link_to 'Gallery', '#', class:"nav-link text-secondary" %></li>
+      <li class="nav-item d-none d-lg-block">
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag 'logo.png', class: "img-fluid" %>
+        <% end %>
+      </li>
+      <li class="nav-item"><%= link_to 'Shop', '#', class:"nav-link text-secondary" %></li>
+      <li class="nav-item"><%= link_to 'Contact Me', '#', class:"nav-link text-secondary" %></li>
+    </ul>
+</nav>
 

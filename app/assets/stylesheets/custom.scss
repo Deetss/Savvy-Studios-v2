@@ -1,82 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i&display=swap');
-
-$global-color: #b57540 !default;
-$global-background: #eccfc7 !default;
+$primary: #b57540 !default;
+$secondary: #fff !default;
+$body-bg: #eccfc7 !default;
 $global-muted-background: #eccfc7 !default;
-$global-secondary-background: #fff !default;
-
-$global-font-family: 'Lora', serif !default;
 
 body{
-    background: $global-background !important;
+    font-family: 'Lora', serif !important;
 }
 h1{
     font-style: italic;
     font-weight: 700;
 }
 
-.uk-divider-color-default{
-    border-bottom: 1px solid #b57540;
+a {
+    font-family: 'Lora', serif !important;
 }
 
-.nav {
-    z-index: 99;
-}
 
-.uk-navbar-item {
-    color: $global-secondary-background !important;
-}
-
-.uk-link-primary {
-    color: $global-color !important;
-}
-
-.hero-small {
-    min-height: calc(15vh) !important;
-    background-position: 50% 30% !important;
-}
-
-.fill-view {
-    display:flex;
+.jumbotron {
+    color: white;
+    background-image: url("/assets/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
-}
+  }
 
-.last-item {
-    flex-grow: 1;
-}
-
-@media only screen and (max-width: 900px) {
-    .fill-view {
-        display:flex;
-        height: 65vh;
-    }
-    
-    .last-item {
-        flex-grow: 1;
-    }
-
-}
-
-@media only screen and (max-width: 780px) {
-    .fill-view {
-        display:flex;
-        height: 80vh;
-    }
-    
-    .last-item {
-        flex-grow: 1;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-    .fill-view {
-        display:flex;
-        height: 90vh;
-    }
-    
-    .last-item {
-        flex-grow: 1;
-    }
-
+.navbar-inner {
+    background:transparent;
 }

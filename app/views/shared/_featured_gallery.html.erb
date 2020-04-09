@@ -1,12 +1,11 @@
-<div class="uk-container">
-  <h1 class="uk-padding uk-heading-divider uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right uk-divider-color-default">My Work</h1>
-  <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small" uk-grid="masonry: true" >
-      <% @gallery.images.order(:position).each do |image| %>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-card-hover uk-padding-remove" uk-lightbox>
-            <a href="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' })) %>"><img data-src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" uk-img></a>
-        </div>
+<div class="container mt-1">
+  <h1 class="w-100">My Work</h1>
+  <hr>
+  <div class="card-columns" > 
+    <% @gallery.images.order(:position).each do |image| %>
+      <div class="card">
+          <a href="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' })) %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid"></a>
       </div>
-      <% end %>
+    <% end %>
   </div>
-</div> 
+</div>

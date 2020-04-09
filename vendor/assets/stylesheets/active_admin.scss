@@ -9,7 +9,8 @@
 
 // Active Admin's got SASS!
 @import "custom.scss";
-@import "uikit";
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
 @import "active_admin/mixins";
 @import "active_admin/base";
 
@@ -17,7 +18,3 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
-
-a.uk-link-primary {
-    color: $global-color !important;
-}
