@@ -3,7 +3,7 @@
   <hr>
   <div class="card-columns" > 
     <% @gallery.images.order(:position).each do |image| %>
-      <div class="card">
+      <div class="card border-0">
           <a href="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' })) %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid"></a>
       </div>
     <% end %>
