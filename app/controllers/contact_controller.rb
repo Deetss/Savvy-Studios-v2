@@ -2,6 +2,6 @@ class ContactController < ApplicationController
   def index
   end
 
-  def create
+  def new
   end
 end

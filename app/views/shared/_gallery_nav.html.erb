@@ -1,7 +1,7 @@
 <ul class="nav flex-column nav-pills">
     <% @galleries.each do |gallery| %>
         <li class="nav-item">
-            <%= link_to gallery.title, gallery_path(gallery), class: "nav-link #{gallery == @gallery ? 'active' : ''}" %>
+            <%= link_to gallery.title, gallery_path(gallery), class: "nav-link #{gallery == @gallery ? 'bg-primary text-white' : ''}" %>
         </li>
     <% end %>
 </ul>
