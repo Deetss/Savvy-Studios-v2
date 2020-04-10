@@ -30,6 +30,11 @@ a {
     text-decoration: underline;
 }
 
+.nav-link.active {
+    color: white !important;
+    background-color: $primary !important;
+}
+
 .featherlight-content {
     padding: 0px !important;
     border: none !important;

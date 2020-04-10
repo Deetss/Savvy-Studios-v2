@@ -1,20 +1,15 @@
-<%= render "shared/navbar"%>
 <%= render 'shared/hero_small' %>
 <div class="container">
     <div class="row">
+        <div class="d-md-none col-12 mt-1 mb-1">
+            <%= render 'shared/gallery_nav' %>
+        </div>
         <div class="col-md-10 col-12">
-            <%= render 'shared/_gallery' %>
+            <%= render 'shared/gallery' %>
         </div>
         <div class="col-md-2 col-12">
-            <ul class="nav flex-column nav-pills">
-            <% @galleries.each do |gallery| %>
-                <li class="nav-item">
-                    <%= link_to gallery.title, gallery_path(gallery), class: "nav-link" %>
-                </li>
-            <% end %>
-            </ul>
+            <%= render 'shared/gallery_nav' %>
         </div>
         
     </div>
 </div>
-<%= render 'shared/footer.html' %>

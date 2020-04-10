@@ -1,11 +1,13 @@
 <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js' %>
-<div id="gallery-images" class="sort-me" data-url="<%= gallery_sort_images_path(@gallery) %>">
-  <% @gallery.images.order(:position).each do |image| %>
-    <div id="<%= dom_id(image) %>" >
-      <%= image_tag image.variant(combine_options: {auto_orient: true, thumbnail: '200x200^', gravity: 'center', extent: '200x200' }) %>
-      <div class="">
-        <%= link_to '', gallery_remove_image_path(:gallery_id => @gallery, :id => image), method: :delete, "uk-icon": "icon: trash; ratio: 2", class: "uk-link-primary" %>
+<div class="container">
+  <div id="gallery-images" class="sort-me" data-url="<%= gallery_sort_images_path(@gallery) %>">
+    <% @gallery.images.order(:position).each do |image| %>
+      <div id="<%= dom_id(image) %>" class="col-4 mb-3" >
+        <%= image_tag image.variant(combine_options: {auto_orient: true, thumbnail: '300x300^', gravity: 'center', extent: '300x300' }), class:"card-img" %>
+        <div class="">
+          <%= link_to '', gallery_remove_image_path(:gallery_id => @gallery, :id => image), method: :delete, "uk-icon": "icon: trash; ratio: 2", class: "uk-link-primary" %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
