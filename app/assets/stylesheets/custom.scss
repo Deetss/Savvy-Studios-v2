@@ -10,20 +10,27 @@ a {
     font-family: 'Lora', serif !important;
 }
 
-
 .jumbotron {
     color: white;
     background-image: url("/assets/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-  }
-  
+}
+
+.jumbotron-large {
+    height: 100vh !important;
+}
+
+.jumbotron-small {
+    height: 40vh !important;
+}
+
 .nav-item:hover{
     text-decoration: underline;
 }
 
 .featherlight-content {
     padding: 0px !important;
+    border: none !important;
 }

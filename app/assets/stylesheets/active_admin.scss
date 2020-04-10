@@ -8,9 +8,10 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
-@import "custom.scss";
+@import "custom_vars.scss";
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "custom.scss";
 @import "active_admin/mixins";
 @import "active_admin/base";
 

@@ -1,5 +1,12 @@
 <div class="container mt-1">
-  <h1 class="w-100">My Work</h1>
+  <% if controller.controller_name == 'home' %>
+    <h1 class="w-100">My Work</h1>
+  <% elsif controller.controller_name == 'galleries' && controller.action_name == 'show' %>
+    <h1 class="w-100"><%= @gallery.title%></h1>
+  <% else %>
+    <h1 class="w-100">Featured Gallery</h1> 
+  <% end %>
+   
   <hr>
   <div class="card-columns" > 
     <% @gallery.images.order(:position).each do |image| %>

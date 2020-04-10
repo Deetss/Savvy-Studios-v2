@@ -1,7 +1,7 @@
 $(function() {
     $(".sort-me").sortable({
-        classes: {"ui-sortable" : "uk-flex uk-flex-wrap",
-                  "ui-sortable-handle" : "uk-card uk-margin-left uk-margin-bottom uk-inline",          
+        classes: {"ui-sortable" : "card border-0",
+                  "ui-sortable-handle" : "card border-0",          
         },
         placeholder: "ui-sortable-placeholder",
         forcePlaceholderSize: true,
