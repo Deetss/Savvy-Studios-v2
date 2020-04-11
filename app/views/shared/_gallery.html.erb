@@ -2,15 +2,17 @@
   <% if controller.controller_name == 'home' %>
     <h1 class="w-100">My Work</h1>
   <% else %>
-    <h1 class="w-100"><%= @gallery.title.capitalize%></h1>
+    <h1 class="w-100"><%= @gallery ? @gallery.title.capitalize : " " %></h1>
   <% end %>
    
   <hr>
   <div class="card-columns" > 
-    <% @gallery.images.order(:position).each do |image| %>
-      <div class="card border-0">
-          <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
-      </div>
+    <% if @gallery %>
+      <% @gallery.images.order(:position).each do |image| %>
+        <div class="card border-0">
+            <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

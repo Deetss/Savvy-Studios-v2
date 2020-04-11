@@ -1,4 +1,4 @@
-<% content_for :title, "Savy Studios | #{@gallery.title.capitalize}" %>
+<% content_for :title, "Savy Studios | #{@gallery ? @gallery.title.capitalize : 'Featured'}"%>
 <%= render 'shared/hero_small' %>
 <div class="container">
     <div class="row">
