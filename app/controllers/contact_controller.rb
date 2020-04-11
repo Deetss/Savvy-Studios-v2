@@ -8,9 +8,11 @@ class ContactController < ApplicationController
     
     if @contact.save!
       SendContactNotificationJob.perform_later @contact
+      flash[:success] = "Thanks for getting in touch!"
       redirect_to action: "index"
     else
-      redirect_to galleries_path
+      flash[:alert] = "Something went wrong! Please try again."
+      redirect_to contact_path
     end
   end
 

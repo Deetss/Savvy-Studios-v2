@@ -9,6 +9,9 @@
 
 // Active Admin's got SASS!
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+$primary-color: #b57540;
+$secondary-color: #eccfc7;
+
 @import "custom.scss";
 @import "bootstrap";
 @import "active_admin/mixins";
@@ -18,3 +21,38 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+#header {
+    color: #fff;
+
+    h1 {
+        color: #fff;
+    }
+
+    a, a:link{
+        color: #fff;
+    }
+}
+
+#title_bar {
+    background: $secondary-color;
+}
+
+.breadcrumb {
+    background-color: $secondary-color;
+}
+
+table.index_table th{
+    background: $secondary-color;
+}
+
+table.index_table th.sorted-asc, table.index_table th.sorted-desc {
+    background: #fff;
+}
+
+#title_bar .action_items span.action_item > a, #title_bar .action_items span.action_item > .dropdown_menu > a {
+    background: #fff;
+}
+
+.sidebar_section > h3 {
+    background: $secondary-color;
+}
