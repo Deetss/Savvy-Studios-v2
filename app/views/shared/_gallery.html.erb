@@ -8,10 +8,18 @@
   <hr>
   <div class="card-columns" > 
     <% if @gallery %>
-      <% @gallery.images.order(:position).each do |image| %>
-        <div class="card border-0">
-            <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
-        </div>
+      <% if controller.controller_name == 'home' %>
+        <% @gallery.images.order(:position).limit(6).each do |image| %>
+          <div class="card border-0">
+              <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
+          </div>
+        <% end %>
+      <% else %>
+        <% @gallery.images.order(:position).each do |image| %>
+          <div class="card border-0">
+              <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
