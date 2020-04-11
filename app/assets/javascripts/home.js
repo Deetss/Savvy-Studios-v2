@@ -2,8 +2,8 @@ document.addEventListener("turbolinks:load", function() {
     $('.lightbox').featherlight(configuration = {});
 
 // this function runs every time you are scrolling
-    if($(".jumbotron-large").length > 0){
-        $(window).scroll(function() {
+    $(window).scroll(function() {
+        if($(".jumbotron-large").length > 0){
             var top_of_element = ($(".jumbotron-large").offset().top + 300);
             var bottom_of_element = ($(".jumbotron-large").offset().top + 300) + $(".jumbotron-large").outerHeight();
             var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
@@ -17,12 +17,12 @@ document.addEventListener("turbolinks:load", function() {
                 chevron.removeClass("infinite");
                 chevron.removeClass("bounce");
                 chevron.addClass("fadeOutUp");
-    
+
                 welcome.removeClass("d-none");
                 welcome.addClass("delay-1s");
                 welcome.addClass("fadeInUp");
-    
+
             }
-        });
-    }
+        }
+    });
   })

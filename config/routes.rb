@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'contact', to: "contact#index"
-  patch 'contact/new'
+  post 'contact', to: "contact#create"
   get 'about_me', to: "about_me#index"
   resources :galleries do
     delete '/image/:id', to: "gallery_images#destroy", as: 'remove_image'

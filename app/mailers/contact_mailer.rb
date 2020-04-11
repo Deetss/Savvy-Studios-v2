@@ -1,11 +1,11 @@
 class ContactMailer < ApplicationMailer
-    default from: "contact@savvystudios.com"
+    default from: '"Contact Request" <contact@savvystudios.com>'
 
-    def contact_email
-        @email = params[:email]
-        @name = params[:name]
+    def contact_email(contact)
+        @email = contact.email
+        @name = contact.name
+        @body = contact.body
         
-        mail(to: @email, subject: 'New contact request from #{@name}')
-
+        mail(to: 'sav_berman@yahoo.com', subject: "New contact request from #{@name}")
     end
 end
