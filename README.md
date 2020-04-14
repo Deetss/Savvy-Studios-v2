@@ -1,24 +1,26 @@
-# README
+# Savy Studios
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an web app built for my wife's photography business.
+Primarily to display her work, allow contact with potential clients, sell some merch.
+Uses Active Admin for managing galleries and contact requests.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+## Dependancies
 
-* Configuration
+* Bootstrap 4
+* Rails 5.2.0
+* Sass
 
-* Database creation
 
-* Database initialization
+# Add this later
+## Development
+## Peculiarity X
 
-* How to run the test suite
+Add a section for each special concept in the application, e.g. a CDN and what
+it is used for, that icons are rendered from a custom icon font and how to update
+it, that all posts are created from an importer, that there's a web UI *and* a
+JSON API *and* an embeddable component.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Make the reader aware of a peculiarity, but remember to keep it short. Details
+should be documented in the respective area.
