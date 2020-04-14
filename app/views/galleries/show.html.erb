@@ -2,17 +2,9 @@
 <%= render 'shared/hero_small' %>
 <div class="container">
     <div class="row">
-        <div class="d-md-none col-12">
-            <div class="container mb-3">
-                <%= render 'shared/gallery_nav' %>    
-            </div>
-        </div>
-        <div class="col-md-10 col-12">
-            <%= render 'shared/gallery' %>
-        </div>
-        <div class="col-md-2 col-12 d-none d-md-inline">
-            <%= render 'shared/gallery_nav' %>
-        </div>
-        
+        <%= render 'shared/gallery_header' %>
+        <%= render 'shared/mobile_gallery_nav' %>
+        <%= render 'shared/gallery' %>
+        <%= render 'shared/gallery_nav' %>
     </div>
 </div>

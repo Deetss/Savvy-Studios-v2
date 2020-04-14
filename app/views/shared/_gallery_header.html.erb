@@ -1,0 +1,8 @@
+<div class="col-12 pl-3">
+    <% if controller.controller_name == 'home' %>
+        <h1 class="w-100">My Work</h1>
+    <% else %>
+        <h1 class="w-100"><%= @gallery ? @gallery.title.capitalize : " " %></h1>
+    <% end %>
+    <hr>
+</div>

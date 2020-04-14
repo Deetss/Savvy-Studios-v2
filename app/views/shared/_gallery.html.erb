@@ -1,11 +1,5 @@
-<div class="container mt-1">
-  <% if controller.controller_name == 'home' %>
-    <h1 class="w-100">My Work</h1>
-  <% else %>
-    <h1 class="w-100"><%= @gallery ? @gallery.title.capitalize : " " %></h1>
-  <% end %>
-   
-  <hr>
+<div class="col-md-10 col-12">   
+
   <div class="card-columns" > 
     <% if @gallery %>
       <% if controller.controller_name == 'home' %>
