@@ -12,7 +12,7 @@
 $primary-color: #b57540;
 $secondary-color: #eccfc7;
 
-@import "custom.scss";
+@import "base/globals";
 @import "bootstrap";
 @import "font-awesome";
 @import "active_admin/mixins";

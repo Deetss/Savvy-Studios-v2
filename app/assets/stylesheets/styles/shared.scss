@@ -1,11 +1,3 @@
-$body-bg: #eccfc7;
-$global-muted-background: #eccfc7 !default;
-
-$theme-colors: (
-  "primary": #b57540,
-  "secondary": #fff,
-);
-
 body{
     font-family: 'Lora', serif !important;
 }
@@ -49,4 +41,12 @@ a {
 
 .featured {
     max-height: 500px;
+}
+
+a.nav-link {
+    padding: 0.5rem 0.5rem;
+}
+
+.img-fluid.logo {
+    height: 4.5rem;
 }
