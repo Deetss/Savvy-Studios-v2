@@ -4,8 +4,10 @@
     <% @gallery.images.order(:position).each do |image| %>
       <div id="<%= dom_id(image) %>" class="col-4 mb-3" >
         <%= image_tag image.variant(combine_options: {auto_orient: true, thumbnail: '300x300^', gravity: 'center', extent: '300x300' }), class:"card-img" %>
-        <div class="">
-          <%= link_to '', gallery_remove_image_path(:gallery_id => @gallery, :id => image), method: :delete, "uk-icon": "icon: trash; ratio: 2", class: "uk-link-primary" %>
+        <div class="card-img-overlay">
+          <%= link_to gallery_remove_image_path(:gallery_id => @gallery, :id => image), method: :delete, class: "text-danger card-link pl-3" do %>
+            <%= fa_icon "trash 3x" %>
+          <% end %>
         </div>
       </div>
     <% end %>
