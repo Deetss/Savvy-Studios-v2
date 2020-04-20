@@ -6,11 +6,18 @@
             <%= image_tag 'https://via.placeholder.com/300', class: "image-fluid" %>
         </div>
         <div class="col-md-8 col-12 mt-4 mt-md-0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac gravida libero. Aenean consectetur elit eget metus aliquet,
-            et feugiat neque viverra. Nulla facilisi. Ut tempor est felis, nec sagittis felis pulvinar quis. Phasellus vitae arcu magna. Maecenas risus turpis, 
-            gravida eu placerat eget, ultricies in sem. Donec varius tortor id nisl tempor, a auctor nibh euismod. Ut orci metus, laoreet tincidunt porta eu, 
-            tempor non eros. Donec quis finibus ex. Aliquam ullamcorper lacinia turpis et sodales. Nunc tincidunt tincidunt est in auctor. Nulla facilisi. 
-            In ultrices ex a eros ullamcorper fermentum.</p>    
+            <p>
+                
+            <% if Rails.env = "Development" %>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac gravida libero. Aenean consectetur elit eget metus aliquet,
+                et feugiat neque viverra. Nulla facilisi. Ut tempor est felis, nec sagittis felis pulvinar quis. Phasellus vitae arcu magna. Maecenas risus turpis, 
+                gravida eu placerat eget, ultricies in sem. Donec varius tortor id nisl tempor, a auctor nibh euismod. Ut orci metus, laoreet tincidunt porta eu, 
+                tempor non eros. Donec quis finibus ex. Aliquam ullamcorper lacinia turpis et sodales. Nunc tincidunt tincidunt est in auctor. Nulla facilisi. 
+                In ultrices ex a eros ullamcorper fermentum.
+            <% else %>
+                Theres nothing here yet..... 
+            <% end %>
+            </p>    
         </div>
     </div>
 </div>
