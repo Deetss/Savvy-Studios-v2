@@ -1,22 +1,30 @@
 <%= content_for :title, "Savy Studios | Contact"%>
 <%= render 'shared/hero_small' %>
-<div class="container">
+<div class="container col-md-4">
+    <h4>If you want to get in touch ill need a few details!</h4>
+    <hr>
     <%= flash_messages %>
     <%= form_with do %>
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-9 col-md-6 pb-2">
                 <%= label_tag(:contact, "Name:") %>
                 <%= text_field(:contact, :name, class: "form-control") %>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-9 pb-2 d-md-none">
+                <%= label_tag(:contact, "Email:") %>
+                <%= text_field(:contact, :email, class: "form-control") %>
+            </div>
+        </div>
+        <div class="row d-none d-md-flex">
+            <div class="col-md-6 pb-2">
                 <%= label_tag(:contact, "Email:") %>
                 <%= text_field(:contact, :email, class: "form-control") %>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 pb-2">
                 <%= label_tag(:contact, "Body:") %>
-                <%= text_area(:contact, :body, class: "form-control") %>
+                <%= text_area(:contact, :body, class: "form-control body-area") %>
                
             </div>
         </div>
