@@ -1,6 +1,13 @@
 body{
     font-family: 'Lora', serif !important;
 }
+
+hr{
+    color: $primary;
+    border-color: $primary;
+    background-color: $primary;
+}
+
 h1{
     font-style: italic;
     font-weight: 700;
