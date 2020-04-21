@@ -1,8 +1,8 @@
-<div class="col-12 pl-3">
+<div class="col-12 pl-3 pb-3">
     <% if controller.controller_name == 'home' %>
-        <h1 class="w-100">My Work</h1>
+        <h1 class="w-100 pb-2">My Work</h1>
     <% else %>
-        <h1 class="w-100"><%= @gallery ? @gallery.title.capitalize : " " %></h1>
+        <h1 class="w-100 pb-2"><%= @gallery ? @gallery.title.capitalize : " " %></h1>
     <% end %>
     <hr>
 </div>
