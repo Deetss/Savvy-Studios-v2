@@ -1,7 +1,7 @@
 <div class="container mt-1">
-  <h1 class="w-100">My Work</h1>
+  <h1 class="w-100 pb-2">My Work</h1>
   <hr>
-  <div class="row">
+  <div class="row pt-3">
     <div class="card-deck" > 
       <% if @gallery %>
         <% @gallery.images.order(:position).limit(6).each do |image| %>
