@@ -25,4 +25,16 @@ document.addEventListener("turbolinks:load", function() {
             }
         }
     });
+
+    $('.datepicker').datepicker('setDaysOfWeekDisabled', [1,2,3,4]);
+
+    $('.event-type').change(function(){
+        var eventType = $('.event-type').val()
+        console.log(eventType)
+        if (eventType == "1") {
+            $('.datepicker').datepicker('setDaysOfWeekDisabled', [1,2,3,4]);
+        } else {
+            $('.datepicker').datepicker('setDaysOfWeekDisabled',[]);
+        }
+    });
   })
