@@ -33,7 +33,7 @@ ActiveAdmin.register Gallery do
   
 
   show do 
-    h4 "Drag and Drop to sort", class:"uk-heading-small"
+    h3 "Drag and Drop to sort"
     render 'image_sorting', { gallery: gallery }
   end
 end

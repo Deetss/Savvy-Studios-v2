@@ -1,6 +1,6 @@
 $(function() {
     $(".sort-me").sortable({
-        classes: {"ui-sortable" : "d-flex flex-wrap",
+        classes: {"ui-sortable" : "card-columns",
                   "ui-sortable-handle" : "card border-0",          
         },
         placeholder: "ui-sortable-placeholder",

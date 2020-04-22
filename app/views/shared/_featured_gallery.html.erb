@@ -2,14 +2,12 @@
   <h1 class="w-100 pb-2">My Work</h1>
   <hr>
   <div class="row pt-3 container m-0">
-    <div class="card-deck" > 
+    <div class="card-columns" > 
       <% if @gallery %>
         <% @gallery.images.order(:position).limit(6).each do |image| %>
-        <div class="col-12 col-md-4">
           <div class="card border-0 m-0 mb-3">
               <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img featured" ></a>
           </div>
-        </div>
         <% end %>
       <% end %>
     </div>
