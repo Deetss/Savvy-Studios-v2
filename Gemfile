@@ -17,6 +17,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Import bootstrap
 gem 'bootstrap', '~> 4.4.1'
+# calendar for appointments
+gem "simple_calendar", "~> 2.0"
 # animations
 gem "animate-rails"
 # icons

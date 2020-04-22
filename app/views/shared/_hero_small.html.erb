@@ -1,5 +1,11 @@
 <div class="d-flex jumbotron jumbotron-fluid jumbotron-small align-items-end p-0">
-      <div class="container">
-          <h1 class="display-4 "><%= controller.controller_name.split('_').map(&:capitalize).join(' ') %></h1>
-      </div>
+    <div class="container">
+        <h1 class="display-4 ">
+        <% if controller.controller_name.split('_').map(&:capitalize).join(' ') == "Contact" %>
+            Let's get in touch!
+        <% else %>
+            <%= controller.controller_name.split('_').map(&:capitalize).join(' ') %>
+        <% end %>
+        </h1>
+    </div>
 </div>
