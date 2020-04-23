@@ -2,7 +2,7 @@ class GalleriesController < ApplicationController
     before_action :set_galleries
 
     def index
-        @gallery = Gallery.find_by(title: 'Gallery')
+        @gallery = Gallery.all.where("title != 'Featured'").order(:title).first()
     end
 
     def show
@@ -12,6 +12,6 @@ class GalleriesController < ApplicationController
     private
     
     def set_galleries
-        @galleries = Gallery.all.where("title != 'Featured'")
+        @galleries = Gallery.all.where("title != 'Featured'").order(:title)
     end
 end

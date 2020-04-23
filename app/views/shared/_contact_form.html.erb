@@ -3,8 +3,8 @@
     <hr>
     <div class="row justify-content-start">
         <div class="col pb-2">
-            <%= label_tag(:contact, "Type of Event:") %>
-            <%= select_tag(:type, options_for_select([['30-Minute Session',1], ['Wedding',2]]), class: "form-control event-type") %>
+            <%= label_tag(:contact, "Reason for Contact:") %>
+            <%= select_tag(:type, options_for_select([['30-Minute Session',1], ['Wedding',2], ['Other', 3]]), class: "form-control event-type") %>
         </div>
     </div>
     <div class="row justify-content-start">
