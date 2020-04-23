@@ -1,19 +1,21 @@
 <div class="col-md-10 col-12 border-right border-primary">   
-  <div class="card-columns container m-0" > 
     <% if @gallery %>
-      <% if controller.controller_name == 'home' %>
-        <% @gallery.images.order(:position).limit(6).each do |image| %>
-          <div class="card border-0 m-0 mb-3">
-              <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
-          </div>
+      <div class="card-columns container m-0" > 
+        <% if controller.controller_name == 'home' %>
+          <% @gallery.images.order(:position).limit(6).each do |image| %>
+            <div class="card border-0 m-0 mb-3">
+                <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
+            </div>
+          <% end %>
+        <% else %>
+          <% @gallery.images.order(:position).each do |image| %>
+            <div class="card border-0 m-0 mb-3">
+                <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
+            </div>
+          <% end %>
         <% end %>
-      <% else %>
-        <% @gallery.images.order(:position).each do |image| %>
-          <div class="card border-0 m-0 mb-3">
-              <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
-          </div>
-        <% end %>
-      <% end %>
+      </div>
+    <% else %>
+      <h1>Theres nothing here yet.....</h1>
     <% end %>
-  </div>
 </div>

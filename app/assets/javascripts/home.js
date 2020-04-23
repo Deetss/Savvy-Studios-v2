@@ -26,15 +26,35 @@ document.addEventListener("turbolinks:load", function() {
         }
     });
 
-    $('.datepicker').datepicker('setDaysOfWeekDisabled', [1,2,3,4]);
+    $('.picker').datepicker('setDaysOfWeekDisabled', [1,2,3,4]);
 
     $('.event-type').change(function(){
         var eventType = $('.event-type').val()
         console.log(eventType)
         if (eventType == "1") {
-            $('.datepicker').datepicker('setDaysOfWeekDisabled', [1,2,3,4]);
+            $('.picker').datepicker('setDaysOfWeekDisabled', [1,2,3,4]);
         } else {
-            $('.datepicker').datepicker('setDaysOfWeekDisabled',[]);
+            $('.picker').datepicker('setDaysOfWeekDisabled',[]);
         }
     });
+
+    $(".contact_form").submit(function(event) {
+        var form = $(this);
+
+        console.log(form)
+
+        if (form[0].checkValidity() === false){
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            $.ajax({
+                url: $(this).data("url"),
+                type: "PATCH",
+                data: $(this).serialize()
+            });
+        }
+
+        form.addClass('was-validated');
+    })
+
   })

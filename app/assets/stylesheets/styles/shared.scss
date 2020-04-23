@@ -74,3 +74,28 @@ a.nav-link {
 .fa-rotate-35 {
     transform: rotate(35deg);
 }
+
+.datepicker {
+    background-color: $primary !important;
+    color: white !important;
+}
+
+.datepicker table tr td.active.active{
+    background: $body-bg !important;
+}
+
+.disabled-date {
+    color: #5c646b !important;
+}
+
+.new.day {
+    display: none;
+}
+
+.old.day {
+    color: $primary !important;
+    &:hover {
+        background: $primary !important;
+        cursor: default !important;
+    }
+}

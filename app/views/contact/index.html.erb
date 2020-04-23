@@ -5,46 +5,9 @@
 <%= render 'shared/hero_small' %>
 <div class="container">
     <div class="row pt-2 justify-content-center">
-        <div class="col my-auto d-none d-md-block">
+        <div class="col">
             <%= render 'shared/rates' %>
         </div>
-        <%= form_with class: "col-md-6 col-12" do %>
-            <h3>Contact Me</h3>
-            <hr>
-            <div class="row justify-content-start">
-                <div class="col pb-2">
-                    <%= label_tag(:contact, "Type of Event:") %>
-                    <%= select_tag(:type, options_for_select([['30-Minute Session',1], ['Wedding',2]]), class: "form-control event-type") %>
-                </div>
-            </div>
-            <div class="row justify-content-start">
-                <div class="col pb-2">
-                    <%= text_field(:contact, :name, class: "form-control", placeholder: "Name") %>
-                </div>
-                <div class="col pb-2">
-                    <%= text_field(:contact, :email, class: "form-control", placeholder: "Email") %>
-                </div>
-            </div>
-            <div class="row justify-content-start">
-                <div class="col pb-2">
-                    <%= telephone_field(:contact, :phone, class: "form-control", placeholder: "Phone Number") %>
-                </div>
-                <div class="col pb-2">
-                    <%= text_field(:contact, :date, class: "form-control datepicker", placeholder: "Requested Date") %>
-                </div>
-            </div>
-            <div class="row justify-content-start">
-                <div class="col-12 pb-2">
-                    <%= text_area(:contact, :body, class: "form-control body-area", placeholder: "Anything else") %>
-                </div>
-            </div>
-            <div class="row mt-2 justify-content-md-start justify-content-center">
-                <div class="col-4">
-                    <button class="btn btn-primary mx-auto">
-                        <%= fa_icon "share" %> <span>Send</span>
-                    </button>
-                </div>
-            </div>
-        <% end %>
+        <%= render 'shared/contact_form' %>
     </div>
 </div>
