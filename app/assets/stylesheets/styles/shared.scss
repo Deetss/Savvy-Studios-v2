@@ -105,6 +105,10 @@ a.nav-link {
     color: $grey-darker !important;
 }
 
+.datepicker-dropdown.datepicker-orient-top::after {
+    border-top: 6px solid $primary-lighter !important;
+}
+
 .datepicker table tr td.active.active{
     color: $primary-lightest !important;
     background: $secondary-base !important;
