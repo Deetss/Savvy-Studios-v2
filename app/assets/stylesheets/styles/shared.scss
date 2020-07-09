@@ -1,7 +1,11 @@
 body{
     font-family: 'Lora', serif !important;
+    color: $grey-darkest;
 }
 
+p{
+    color: $grey-darker;
+}
 hr{
     color: $primary;
     border-color: $primary;
@@ -11,6 +15,18 @@ hr{
 h1{
     font-style: italic;
     font-weight: 700;
+    color: $primary-lightest;
+}
+h2{
+    color: $grey-darker;
+}
+
+h5 {
+    color: $grey-darker;
+}
+
+li {
+    color: $grey-darker;
 }
 
 a {
@@ -18,7 +34,7 @@ a {
 }
 
 .jumbotron {
-    color: white;
+    color: $primary-lightest;
     background-image: image_url("hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -39,6 +55,7 @@ a {
 
 .nav-item:hover{
     text-decoration: underline;
+    color: $secondary-dark;
 }
 
 .featherlight-content {
@@ -84,12 +101,22 @@ a.nav-link {
 }
 
 .datepicker {
-    background-color: $primary !important;
-    color: white !important;
+    background-color: $primary-lighter !important;
+    color: $grey-darker !important;
 }
 
 .datepicker table tr td.active.active{
-    background: $body-bg !important;
+    color: $primary-lightest !important;
+    background: $secondary-base !important;
+}
+
+.day {
+    color: $secondary-base !important;
+
+    &:hover{
+        color: $primary-lightest !important;
+        background-color: $secondary-base !important;
+    }
 }
 
 .disabled-date {
@@ -101,7 +128,7 @@ a.nav-link {
 }
 
 .old.day {
-    color: $primary !important;
+    color: $secondary-darker !important;
     &:hover {
         background: $primary !important;
         cursor: default !important;
@@ -110,4 +137,20 @@ a.nav-link {
 
 .navbar-spacer{
     height: 10vh !important;
+}
+
+.btn-primary {
+    color: $primary-lightest !important;
+    background-color: $secondary-base !important;
+}
+
+.form-control {
+    background-color: $primary-lighter !important;
+    &:focus{
+        background-color: $primary-lightest !important; 
+    }
+}
+
+.footer {
+    color: $secondary-base !important;
 }

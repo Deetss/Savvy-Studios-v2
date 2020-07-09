@@ -1,8 +1,8 @@
-<%= form_with html: { class: "col-md-5 col-12 contact_form", novalidate: true } do %>
+<%= form_with html: { class: "col-md-5 col-12 contact_form text-center", novalidate: true } do %>
     <h2>Contact Me</h2>
     <hr>
     <div class="row justify-content-start">
-        <div class="col pb-2">
+        <div class="col pb-2 text-left">
             <%= label_tag(:contact, "Reason for Contact:") %>
             <%= select_tag(:type, options_for_select([['30-Minute Session',1], ['Wedding',2], ['Other', 3]]), class: "form-control event-type") %>
         </div>
