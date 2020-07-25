@@ -1,7 +1,7 @@
 <% content_for :title, "Savy Studios | #{@gallery ? @gallery.title.capitalize : 'Featured'}"%>
 <%= render 'shared/hero_small' %>
 <div class="container">
-    <div class="row">
+    <div class="row pl-md-5">
         <%= render 'shared/gallery_header' %>
         <%= render 'shared/mobile_gallery_nav' %>    
         <%= render 'shared/gallery' %>
