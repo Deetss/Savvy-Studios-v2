@@ -15,6 +15,6 @@ ActiveAdmin.register PageContent do
   #   permitted
   # end
 
-  permit_params :PageName, :content
+  permit_params :PageName, :content, :section
   
 end
