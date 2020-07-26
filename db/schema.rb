@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_25_223744) do
+ActiveRecord::Schema.define(version: 2020_07_26_025418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -252,12 +252,34 @@ ActiveRecord::Schema.define(version: 2020_07_25_223744) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "packages", force: :cascade do |t|
+    t.string "name"
+    t.string "time_frame"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "packages_rates", force: :cascade do |t|
+    t.integer "package_id"
+    t.integer "rate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "page_contents", force: :cascade do |t|
     t.string "PageName"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "section"
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer "price"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "package_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
