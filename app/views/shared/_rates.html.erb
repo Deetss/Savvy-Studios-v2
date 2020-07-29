@@ -5,25 +5,18 @@
     </div>
     <div class="col ml-5">
         <div class="row">
-            <div class="col">
-                <h5>Super Session (30 mins):</h5>
-                <ul>
-                    <li>
-                        <span class="font-weight-bold">$60</span> - If the location is in Fort Worth, Arlington, or Mansfield.
-                    </li>
-                    <li>
-                        <span class="font-weight-bold">$80</span> - Plus $20 if the location is in another part of DFW.
-                    </li>
-                </ul>
-            </div>
-            <div class="col">
-                <h5>Wedding (Whole Day):</h5> 
-                <ul>
-                    <li>
-                        <span class="font-weight-bold">$250</span> - I am currently only photographing DFW weddings.
-                    </li>
-                </ul>
-            </div>
+            <% @packages.each do |p|%>
+                <div class="col">
+                    <h5><%= p.name %> (<%= p.time_frame %>):</h5>
+                    <ul>
+                        <% p.rates.each do |r|%>
+                            <li>
+                                <span class="font-weight-bold"><%= "$" + r.price.to_s %></span> - <%= r.description %>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div> 
+            <% end %>
         </div>
     </div>
 </div>

@@ -72,6 +72,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   #env variables
   gem "figaro"
+  gem 'seed_dump'
 end
 
 group :test do

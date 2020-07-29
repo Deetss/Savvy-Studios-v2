@@ -1,6 +1,7 @@
 class ContactController < ApplicationController
   def index
     @contact = Contact.new
+    @packages = Package.all
   end
 
   def create
