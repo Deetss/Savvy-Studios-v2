@@ -7,9 +7,9 @@ Package.create!([
   {name: "Wedding", time_frame: "Whole Day"}
 ])
 Rate.create!([
-  {price: 60, description: "If the location is in Fort Worth, Arlington, or Mansfield.", package_id: 2},
-  {price: 80, description: "Plus $20 if the location is in another part of DFW.", package_id: 2},
-  {price: 250, description: "I am currently only photographing DFW weddings.", package_id: 3}
+  {price: 60, description: "If the location is in Fort Worth, Arlington, or Mansfield.", package_id: 1},
+  {price: 80, description: "Plus $20 if the location is in another part of DFW.", package_id: 1},
+  {price: 250, description: "I am currently only photographing DFW weddings.", package_id: 1}
 ])
 Gallery.create!([
   {title: "Featured", description: ""},
