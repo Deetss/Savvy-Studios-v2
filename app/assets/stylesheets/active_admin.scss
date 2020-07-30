@@ -10,7 +10,7 @@
 // Active Admin's got SASS!
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 $primary-color: #b57540;
-$secondary-color: #eccfc7;
+$secondary-color: #f0e3d9;
 
 @import "main";
 @import "bootstrap";
@@ -39,6 +39,7 @@ $secondary-color: #eccfc7;
 
 .breadcrumb {
     background-color: $secondary-color;
+    color: #3b3a3a !important;
 }
 
 table.index_table th{
@@ -55,4 +56,8 @@ table.index_table th.sorted-asc, table.index_table th.sorted-desc {
 
 .sidebar_section > h3 {
     background: $secondary-color;
+}
+
+.col {
+    width: auto !important;
 }
