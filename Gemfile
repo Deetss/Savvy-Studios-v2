@@ -25,6 +25,9 @@ gem "animate-rails"
 # Devise for auth
 gem 'devise'
 
+# Payments
+gem 'stripe-rails'
+
 # Admin
 gem 'activeadmin'
 
