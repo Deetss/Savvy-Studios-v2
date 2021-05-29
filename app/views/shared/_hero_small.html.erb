@@ -1,6 +1,6 @@
 <div class="d-flex jumbotron jumbotron-fluid jumbotron-small align-items-end p-0">
     <div class="container">
-        <h1 class="display-4 ">
+        <h1 class="<%= controller.controller_name.split('_').map(&:capitalize).join(' ') == "Galleries" ? "d-none" : "display-4" %>  ">
         <% if controller.controller_name.split('_').map(&:capitalize).join(' ') == "Contact" %>
             Let's get in touch!
         <% else %>
