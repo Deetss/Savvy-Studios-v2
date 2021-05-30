@@ -15,11 +15,15 @@
     <noscript><%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css', media: 'all', 'data-turbolinks-track': 'reload' %></noscript>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render "shared/navbar"%>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+    <div class="container-fluid px-0">
+      <%= render "shared/navbar"%>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

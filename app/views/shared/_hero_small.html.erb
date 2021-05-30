@@ -1,11 +1,9 @@
-<div class="d-flex jumbotron jumbotron-fluid jumbotron-small align-items-end p-0">
-    <div class="container">
-        <h1 class="<%= controller.controller_name.split('_').map(&:capitalize).join(' ') == "Galleries" ? "d-none" : "display-4" %>  ">
-        <% if controller.controller_name.split('_').map(&:capitalize).join(' ') == "Contact" %>
-            Let's get in touch!
-        <% else %>
-            <%= controller.controller_name.split('_').map(&:capitalize).join(' ') %>
-        <% end %>
-        </h1>
-    </div>
+<div class="d-flex jumbotron jumbotron-fluid jumbotron-small align-items-end px-4 m-0">
+    <h1 class="<%= controller.controller_name.split('_').map(&:capitalize).join(' ') == "Galleries" ? "d-none" : "display-4" %>  ">
+    <% if controller.controller_name.split('_').map(&:capitalize).join(' ') == "Contact" %>
+        Let's get in touch!
+    <% else %>
+        <%= controller.controller_name.split('_').map(&:capitalize).join(' ') %>
+    <% end %>
+    </h1>
 </div>

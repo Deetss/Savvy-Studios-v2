@@ -1,11 +1,7 @@
-<div class="col-md-2 col-12 d-none d-md-inline">
-    <div class="container mb-3">
-        <ul class="nav flex-column nav-pills">
-            <% @galleries.each do |gallery| %>
-                <li class="nav-item">
-                    <%= link_to gallery.title.capitalize, gallery_path(gallery), class: "nav-link #{gallery == @gallery ? 'bg-primary text-white' : ''}" %>
-                </li>
-            <% end %>
-        </ul>
-    </div>
-</div>
+<ul class="nav nav-pills mt-4 nav-fill">
+    <% @galleries.each do |gallery| %>
+        <li class="nav-item">
+            <%= link_to gallery.title, gallery_path(gallery), class: "nav-link #{gallery == @gallery ? 'bg-primary text-white' : ''}" %>
+        </li>
+    <% end %>
+</ul>

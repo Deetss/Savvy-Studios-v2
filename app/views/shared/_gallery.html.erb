@@ -1,26 +1,27 @@
-<div class="col-md-10 col-12 border-md-right border-primary">   
-    <% if @gallery %>
-      <div class="card-columns container m-0" > 
-        <% if controller.controller_name == 'home' %>
-          <% @gallery.images.order(:position).limit(6).each do |image| %>
-            <div class="card border-0 m-0 mb-3">
-                <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
-            </div>
-          <% end %>
-        <% else %>
-          <% if @gallery.images.count > 0 %>
-            <% @gallery.images.order(:position).each do |image| %>
-              <div class="card border-0 m-0 mb-3">
-                  <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid featured" ></a>
-              </div>
-            <% end %>
+<% if @gallery %>
+  <div class="row masonry gx-2 mt-5">
+    <% if controller.controller_name == 'home' %>
+      <% @gallery.images.order(:position).limit(6).each do |image| %>
+        <div class="col-sm-6 col-lg-3 mb-2">
+          <div class="card border-0">
+            <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img img-fluid" ></a>
           </div>
-          <% else %>
-            </div>
-            <h1> Theres nothing here yet.....</h1>
-          <% end %>
-        <% end %>
+        </div>
+      <% end %>
     <% else %>
-      <h1>Theres nothing here yet.....</h1>
+      <% if @gallery.images.count > 0 %>
+        <% @gallery.images.order(:position).each do |image| %>
+          <div class="col-sm-6 col-lg-3 mb-2">
+            <div class="card border-0">
+                <img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>">
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <h1> Theres nothing here yet.....</h1>
+      <% end %>
     <% end %>
-</div>
+  </div>
+<% else %>
+  <h1>Theres nothing here yet.....</h1>
+<% end %>
