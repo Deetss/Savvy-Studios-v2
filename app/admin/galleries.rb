@@ -25,7 +25,7 @@ ActiveAdmin.register Gallery do
       input :images, as: :file, input_html: { multiple: true, accept: "image/png, image/gif, image/jpeg" }
     end
     if f.object.images.any?
-      render "image_sorting", { can_delete: true}
+      render "image_sorting", {can_delete: true}
     end
     para "Press cancel to return to the list without saving."
     actions

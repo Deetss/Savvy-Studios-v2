@@ -8,9 +8,10 @@ class GalleryImagesController < ApplicationController
 
     def sort_images
         params[:attachment].each_with_index do |id, index|
-          ActiveStorage::Attachment.where(id: id).update_all(position: index + 1)
+            puts "there should be something after this"
+            puts Gallery.with_attached_images.find(params[:gallery_id]).images.where(id: id)
+            Gallery.with_attached_images.find(params[:gallery_id]).images.where(id: id).update(position: index + 1)
         end
-      
         head :ok
     end
 end
