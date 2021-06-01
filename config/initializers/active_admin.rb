@@ -312,7 +312,7 @@ ActiveAdmin.setup do |config|
   # You can add your own content to the site head like analytics. Make sure
   # you only pass content you trust.
   #
-  # config.head = ''.html_safe
+  config.head = '<script src="https://kit.fontawesome.com/fe6eb4949a.js" crossorigin="anonymous"></script>'.html_safe
 
   # == Footer
   #
