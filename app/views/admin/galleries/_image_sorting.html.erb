@@ -3,7 +3,7 @@
 <%= javascript_include_tag 'https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'https://unpkg.com/packery@2/dist/packery.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
 <div class="container-fluid">
-  <div id="gallery-images" class="row masonry gx-2" data-url="<%= gallery_sort_images_path(@gallery) %>" style="height: <%= @gallery_height %>">
+  <div id="gallery-images" class="row masonry gx-2" data-url="<%= gallery_sort_images_path(@gallery) %>" style="height: <%= @gallery_height %> !important">
     <% @gallery.images.order(:position).each do |image| %>
       <div id="<%= dom_id(image) %>" class="col-sm-6 col-lg-3 mb-2 drag-me">
         <div class="card border-0" >
