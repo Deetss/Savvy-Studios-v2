@@ -1,14 +1,16 @@
 class Gallery < ApplicationRecord
+    after_validation :set_slug, only: [:create, :update]
+
     has_many_attached :images
 
-    validates_format_of :name, :without => /^\d/
+    validates_format_of :title, :without => /\A\d/
 
     def to_param
-        title.parameterize
+        self.slug
     end
 
-    
-    def self.find(input)
-        input.to_i == 0 ? find_by_name(input) : super
-    end
+    private
+    def set_slug
+        self.slug = title.to_s.parameterize
+    end     
 end

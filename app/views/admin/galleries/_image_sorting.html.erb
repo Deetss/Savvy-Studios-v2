@@ -7,7 +7,7 @@
     <% @gallery.images.order(:position).each do |image| %>
       <div id="<%= dom_id(image) %>" class="col-sm-6 col-lg-3 mb-2 drag-me">
         <div class="card border-0" >
-          <%= image_tag image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "1280x720", compress: "lossless", quality: 85 }).processed, class:"card-img" %>
+          <%= image_tag image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 85 }).processed, class:"card-img" %>
           <div class="card-img-overlay">
             <%= link_to gallery_remove_image_path(:gallery_id => @gallery, :id => image), method: :delete, class: "text-danger card-link pl-3" do %>
               <i class="fas fa-trash-alt fa-2x fa-border" title="delete"></i>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_025418) do
+ActiveRecord::Schema.define(version: 2021_06_02_030148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -228,15 +228,17 @@ ActiveRecord::Schema.define(version: 2020_07_26_025418) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
   end
 
   create_table "gallery_images", force: :cascade do |t|
-    t.string "title"
-    t.date "date"
-    t.bigint "image_category_id"
+    t.bigint "gallery_id"
+    t.bigint "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["image_category_id"], name: "index_gallery_images_on_image_category_id"
+    t.integer "position"
+    t.index ["gallery_id"], name: "index_gallery_images_on_gallery_id"
+    t.index ["image_id"], name: "index_gallery_images_on_image_id"
   end
 
   create_table "image_categories", force: :cascade do |t|
@@ -247,7 +249,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_025418) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string "title"
+    t.string "alt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -283,4 +285,6 @@ ActiveRecord::Schema.define(version: 2020_07_26_025418) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "gallery_images", "galleries"
+  add_foreign_key "gallery_images", "images"
 end

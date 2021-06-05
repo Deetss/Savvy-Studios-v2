@@ -36,4 +36,9 @@ ActiveAdmin.register Gallery do
     h3 "Drag and Drop to sort"
     render 'image_sorting', { gallery: gallery }
   end
+
+  controller do
+    defaults :finder => :find_by_slug
+  end
+  
 end
