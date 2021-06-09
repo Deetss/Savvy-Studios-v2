@@ -19,6 +19,8 @@ gem 'bootstrap', '~> 5.0.1'
 gem "animate-rails"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+#for user_agent stuff
+gem "browser"
 
 # Devise for auth
 gem 'devise'
