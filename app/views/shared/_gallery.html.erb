@@ -1,10 +1,10 @@
 <% if @gallery %>
-  <div class="row masonry gx-2 mt-5" style="height: <%= @gallery_height %> !important">
+  <div class="row masonry gx-2 mt-5">
     <% if controller.controller_name == 'home' %>
       <% @gallery.images.order(:position).each do |image| %>
         <div class="col-sm-6 col-lg-3 mb-2">
           <div class="card border-0">
-              <img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 85 }).processed)  %>" data-src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 85 }).processed)  %>" class="card-img lazy" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "1920x1080" }))  %>">
+              <img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 5 }).processed)  %>" data-src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 80 }).processed)  %>" class="card-img lazy" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "1920x1080" }))  %>">
           </div>
         </div>
       <% end %>
@@ -13,7 +13,7 @@
         <% @gallery.images.order(:position).each do |image| %>
           <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card border-0">
-                <img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 10 }).processed)  %>" data-src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 85 }).processed)  %>" class="card-img lazy" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "1920x1080" }))  %>">
+                <img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", quality: 5 }).processed)  %>" data-src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 80 }).processed)  %>" class="card-img lazy" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "1920x1080" }))  %>">
             </div>
           </div>
         <% end %>

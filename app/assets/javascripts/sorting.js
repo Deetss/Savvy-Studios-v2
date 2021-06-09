@@ -3,7 +3,7 @@ $(function() {
     var grid = $('.masonry').packery({
         //options
         // slow transitions
-        transitionDuration: '0.4s',
+        transitionDuration: 0,
         percentPosition: true,
     });
 
