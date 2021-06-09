@@ -163,9 +163,13 @@ a.nav-link {
     color: $grey-darkest !important;
 }
 
-.thumb {
-    transition: transform .2s; /* Animation */
-    &:hover{
-        cursor: pointer !important;
+.zoom-container {
+    overflow: hidden;
+    .zoom {
+        transition: transform .45s; /* Animation */
+        &:hover{
+            cursor: pointer !important;
+            transform: scale(1.15);
+        }
     }
 }
