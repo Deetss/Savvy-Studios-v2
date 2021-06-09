@@ -14,7 +14,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= preload_link_tag 'https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css', 'data-turbolinks-track': 'reload', 'onload': 'this.onload=null;this.rel="stylesheet";' %>
     <noscript><%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css', media: 'all', 'data-turbolinks-track': 'reload' %></noscript>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: true  %>
     <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'https://unpkg.com/packery@2/dist/packery.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
