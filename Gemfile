@@ -22,6 +22,9 @@ gem "animate-rails"
 #for user_agent stuff
 gem "browser"
 
+#background jobs
+gem 'sidekiq'
+
 # Devise for auth
 gem 'devise'
 

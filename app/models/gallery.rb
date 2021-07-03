@@ -1,5 +1,6 @@
 class Gallery < ApplicationRecord
     after_validation :set_slug, only: [:create, :update]
+    after_update :process_variants
 
     has_many_attached :images
 
@@ -12,5 +13,13 @@ class Gallery < ApplicationRecord
     private
     def set_slug
         self.slug = title.to_s.parameterize
-    end     
+    end
+
+    def process_variants
+        images = self.images.all
+        images.each do |img|
+            ImageWorker.perform_async(img.id, id)
+        end
+        
+    end
 end

@@ -21,6 +21,7 @@ ActiveAdmin.register Gallery do
       input :description
       li "Created at #{f.object.created_at}" unless f.object.new_record?
     end
+    actions
     inputs do
       input :images, as: :file, input_html: { multiple: true, accept: "image/png, image/gif, image/jpeg" }
     end
