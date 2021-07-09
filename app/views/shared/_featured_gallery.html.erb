@@ -3,7 +3,7 @@
     <div class="card-columns" > 
       <% if @gallery %>
         <% @gallery.images.order(:position).each do |image| %>
-          <div class="card border-0 m-0 mb-3">
+          <div class="card border-0 m-0 mb-3 shadow">
               <a class="lightbox" href="" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>"><img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center' }))  %>" class="card-img featured" ></a>
           </div>
         <% end %>

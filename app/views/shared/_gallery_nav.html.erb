@@ -1,6 +1,6 @@
-<ul class="nav nav-pills mt-4 nav-fill">
+<ul class="nav nav-pills nav-fill mb-5 text-shadow">
     <% @galleries.each do |gallery| %>
-        <li class="nav-item">
+        <li class="nav-item <%= gallery == @gallery ? 'shadow' : '' %>" >
             <%= link_to gallery.title, gallery_path(gallery), class: "nav-link #{gallery == @gallery ? 'bg-primary text-white' : ''}" %>
         </li>
     <% end %>

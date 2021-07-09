@@ -4,39 +4,39 @@
     <div class="row justify-content-start">
         <div class="col pb-2 text-left">
             <%= label_tag(:contact, "Reason for Contact:") %>
-            <%= select_tag(:type, options_for_select([['30-Minute Session',1], ['Wedding',2], ['Other', 3]]), class: "form-control event-type") %>
+            <%= select_tag(:type, options_for_select([['30-Minute Session',1], ['Wedding',2], ['Other', 3]]), class: "form-control event-type shadow-sm") %>
         </div>
     </div>
     <div class="row justify-content-start">
         <div class="col pb-2">
-            <%= text_field(:contact, :name, class: "form-control", placeholder: "Name *", required: true) %>
+            <%= text_field(:contact, :name, class: "form-control shadow-sm", placeholder: "Name *", required: true) %>
             <div class="invalid-feedback">Please enter your name. This field is required.</div>
         </div>
         <div class="col pb-2 d-flex-inline">
-            <%= text_field(:contact, :email, class: "form-control", placeholder: "Email *", type: "email", required: true) %>
+            <%= text_field(:contact, :email, class: "form-control shadow-sm", placeholder: "Email *", type: "email", required: true) %>
             <div class="invalid-feedback">Please enter a valid email. This field is required.</div>
         </div>
     </div>
     <div class="row justify-content-start">
         <div class="col pb-2">
-            <%= telephone_field(:contact, :phone, class: "form-control", placeholder: "Phone Number") %>
+            <%= telephone_field(:contact, :phone, class: "form-control shadow-sm", placeholder: "Phone Number") %>
         </div>
         <div class="col pb-2">
-            <%= text_field(:contact, :date, class: "form-control picker", placeholder: "Requested Date") %>
+            <%= text_field(:contact, :date, class: "form-control picker shadow-sm", placeholder: "Requested Date") %>
         </div>
     </div>
     <div class="row justify-content-start">
         <div class="col-12 pb-2">
-            <%= text_field(:contact, :location, class: "form-control", placeholder: "Event Location") %>
+            <%= text_field(:contact, :location, class: "form-control shadow-sm", placeholder: "Event Location") %>
         </div>
         <div class="col-12 pb-2">
-            <%= text_area(:contact, :body, class: "form-control body-area", placeholder: "Questions/Concerns *", required: true) %>
+            <%= text_area(:contact, :body, class: "form-control body-area shadow-sm", placeholder: "Questions/Concerns *", required: true) %>
             <div class="invalid-feedback">Please send us some message. This field is required</div>
         </div>
     </div>
     <div class="row mt-2 justify-content-md-start justify-content-center">
         <div class="col-12">
-            <button class="btn btn-primary mx-auto">
+            <button class="btn btn-primary mx-auto shadow text-shadow-sm">
                 <i class="fa fa-share"></i> <span>Send</span>
             </button>
         </div>
