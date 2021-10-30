@@ -7,7 +7,7 @@
         <div class="row">
             <% @packages.each do |p|%>
                 <div class="col">
-                    <h5><%= p.name %> (<%= p.time_frame %>):</h5>
+                    <h5><%= p.name %> (<%= p.time_frame %>)</h5>
                     <ul>
                         <% p.rates.each do |r|%>
                             <li>
