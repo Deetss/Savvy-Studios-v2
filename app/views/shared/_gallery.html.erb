@@ -4,7 +4,7 @@
       <% @gallery.images.order(:position).each do |image| %>
         <div class="col-sm-6 col-lg-3 mb-2">
           <div class="card border-0 zoom-container shadow">
-              <img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 5, sampling_factor: "4:2:0", interlace: "plane" }).processed)  %>" data-src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 80, sampling_factor: "4:2:0", interlace: "plane" }).processed)  %>" class="card-img zoom lazy" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "1920x1080" }))  %>">
+              <img src="<%= url_for(image.variant(auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 5, sampling_factor: "4:2:0", interlace: "plane" ).processed)  %>" data-src="<%= url_for(image.variant(auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 80, sampling_factor: "4:2:0", interlace: "plane" ).processed)  %>" class="card-img zoom lazy" data-featherlight="<%= url_for(image.variant(auto_orient: true, gravity: 'center', resize: "1920x1080" ))  %>" loading="lazy">
           </div>
         </div>
       <% end %>
@@ -13,7 +13,7 @@
         <% @gallery.images.order(:position).each do |image| %>
           <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card border-0 zoom-container shadow">
-                <img src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 5, sampling_factor: "4:2:0", interlace: "plane" }).processed)  %>" data-src="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 80, sampling_factor: "4:2:0", interlace: "plane" }).processed)  %>" class="card-img zoom lazy" data-featherlight="<%= url_for(image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: "1920x1080" }))  %>">
+                <img src="<%= url_for(image.variant(auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 5, sampling_factor: "4:2:0", interlace: "plane").processed)  %>" data-src="<%= url_for(image.variant(auto_orient: true, gravity: 'center', resize: "500x700", compress: "lossless", quality: 80, sampling_factor: "4:2:0", interlace: "plane" ).processed)  %>" class="card-img zoom lazy" data-featherlight="<%= url_for(image.variant(auto_orient: true, gravity: 'center', resize: "1920x1080"))  %>" loading="lazy">
             </div>
           </div>
         <% end %>
