@@ -1,7 +1,7 @@
 class ContactController < ApplicationController
   def index
     @contact = Contact.new
-    @packages = Package.all
+    @packages = Package.positioned
   end
 
   def create
