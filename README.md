@@ -15,7 +15,7 @@ Uses Active Admin for managing galleries and contact requests.
 
 ## Testing
 * Tests are using RSpec
-* To run the test suite `bundle exec rspec`
+* To run the test suite `bundle exec rspec` or simply `rspec`
 * YOU MUST RUN TESTS BEFORE PUSHING TO GITHUB
 
 # Add this later
