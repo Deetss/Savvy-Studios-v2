@@ -11,7 +11,12 @@ Uses Active Admin for managing galleries and contact requests.
 * Bootstrap 4
 * Rails 5.2.0
 * Sass
+* ImageMagick
 
+## Testing
+* Tests are using RSpec
+* To run the test suite `bundle exec rspec`
+* YOU MUST RUN TESTS BEFORE PUSHING TO GITHUB
 
 # Add this later
 ## Development
