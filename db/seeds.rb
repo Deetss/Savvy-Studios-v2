@@ -3,8 +3,8 @@ PageContent.create!([
 ])
 
 Package.create!([
-  {name: "Super Session ", time_frame: "30 mins"},
-  {name: "Wedding", time_frame: "Whole Day"}
+  {name: "Super Session ", time_frame: "30 mins", position: 1},
+  {name: "Wedding", time_frame: "Whole Day", position: 2}
 ])
 Rate.create!([
   {price: 80, description: "In and around DFW", package_id: 1},
