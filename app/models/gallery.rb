@@ -1,6 +1,6 @@
 class Gallery < ApplicationRecord
     after_validation :set_slug, only: [:create, :update]
-    after_update :process_variants
+    after_create :process_variants
 
     has_many_attached :images
 
