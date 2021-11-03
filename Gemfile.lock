@@ -152,7 +152,7 @@ GEM
     has_scope (0.8.0)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
@@ -379,7 +379,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.6.5p114
+   ruby 2.6.8p205
 
 BUNDLED WITH
    1.17.2
