@@ -8,6 +8,12 @@ RSpec.describe Gallery, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'has a unique title' do
+    subject.save
+    problem_subject = described_class.new(title: "Test gallery", description: "test description")
+    expect(problem_subject).to_not be_valid
+  end
+
 
   it 'should have a slug' do
       subject.save

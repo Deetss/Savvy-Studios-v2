@@ -5,6 +5,7 @@ class Gallery < ApplicationRecord
     has_many_attached :images
 
     validates_presence_of :title
+    validates_uniqueness_of :title
     validates_format_of :title, :without => /\A\d/
 
     def to_param
