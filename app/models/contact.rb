@@ -1,6 +1,6 @@
 class Contact < ApplicationRecord
     
-    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+    validates_format_of :email,:with => /\A[^@\s]+@([^@.\s]+\.)+[^@.\s]+\z/
     validates :name, presence: true
     validates :email, presence: true
 
