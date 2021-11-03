@@ -3,9 +3,9 @@ class GalleriesController < ApplicationController
 
     def index
         @gallery = Gallery.all.where("title != 'Featured'").order(:title).first()
-        
-        @gallery_height = (@gallery.images.count() / 4) * 700
-        puts @gallery_height
+        if @gallery
+            @gallery_height = (@gallery.images.count() / 4) * 700
+        end
     end
 
     def show
