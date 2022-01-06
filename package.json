@@ -1,5 +1,8 @@
 {
   "name": "savvy-studios-v2",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/ujs": "^7.0.0",
+    "jquery": "^3.6.0"
+  }
 }

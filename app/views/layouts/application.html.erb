@@ -9,6 +9,7 @@
     <meta name="description" content="Savy Studios - DFW Photographer. Doing weddings and standard photoshoots at a location of your choosing.">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= yield(:head)%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/fe6eb4949a.js" crossorigin="anonymous" defer></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload', defer: true %>
