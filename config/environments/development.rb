@@ -46,6 +46,7 @@ Rails.application.configure do
   :enable_starttls_auto => true
   }
 
+  config.hosts = "e745-107-138-131-51.ngrok.io"
 
   config.action_mailer.default_url_options  = { host: 'localhost', port: 3000 }
 

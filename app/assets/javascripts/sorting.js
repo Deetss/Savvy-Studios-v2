@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
     
     // init Masonry
     var $grid = $('.masonry').packery({
