@@ -38,6 +38,7 @@ gem 'image_processing'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'acts_as_list'
+gem 'rails-ujs'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

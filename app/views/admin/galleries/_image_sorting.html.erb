@@ -2,6 +2,7 @@
 <%= javascript_include_tag 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'https://unpkg.com/packery@2/dist/packery.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
+
 <div class="container-fluid">
   <div id="gallery-images" class="row masonry gx-2" data-url="<%= gallery_sort_images_path(@gallery) %>" >
     <% @gallery.images.order(:position).each do |image| %>

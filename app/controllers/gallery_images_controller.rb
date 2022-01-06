@@ -7,11 +7,13 @@ class GalleryImagesController < ApplicationController
     end
 
     def sort_images
-        params[:attachment].each_with_index do |id, index|
-            puts "there should be something after this"
-            puts Gallery.with_attached_images.find(params[:gallery_id]).images.where(id: id)
-            Gallery.with_attached_images.find(params[:gallery_id]).images.where(id: id).update(position: index + 1)
+        respond_to do |format|
+            format.json { 
+                params[:attachment].each_with_index do |id, index|
+                    Gallery.with_attached_images.find_by_slug(params[:gallery_id]).images.where(id: id).update(position: index + 1)
+                end
+                head :no_content
+            }
         end
-        head :ok
     end
 end
