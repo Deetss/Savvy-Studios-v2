@@ -18,4 +18,5 @@
 //= require activestorage
 //= require turbolinks
 //= link home
+//= link galleries
 //= link sorting
