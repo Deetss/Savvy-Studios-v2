@@ -3,10 +3,28 @@
   <head>
     <title><%= yield(:title)%></title>
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#b57540">
-    <meta property="og:site_name" content="Savy Studios"/>
-    <meta property="og:image" content="<%= image_url("social-banner.png") %>">
+
+    <!-- Primary Meta Tags -->
+    <title>Meta Tags — Preview, Edit and Generate</title>
+    <meta name="title" content="<%= yield(:title)%>">
     <meta name="description" content="Savy Studios - DFW Photographer. Doing weddings and standard photoshoots at a location of your choosing.">
+    <meta name="theme-color" content="#b57540">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Savy Studios"/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:title" content="<%= yield(:title)%>">
+    <meta property="og:description" content="Savy Studios - DFW Photographer. Doing weddings and standard photoshoots at a location of your choosing.">
+    <meta property="og:image" content="<%= image_url("social-banner.png") %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<%= request.original_url %>">
+    <meta property="twitter:title" content="<%= yield(:title)%>">
+    <meta property="twitter:description" content="Savy Studios - DFW Photographer. Doing weddings and standard photoshoots at a location of your choosing.">
+    <meta property="twitter:image" content="<%= image_url("social-banner.png") %>">
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
