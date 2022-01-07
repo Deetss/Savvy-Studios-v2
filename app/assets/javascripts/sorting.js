@@ -1,5 +1,4 @@
-$(function() {
-    
+$().ready(function() {
     // init Masonry
     var $grid = $('.masonry').packery({
         //options
@@ -11,12 +10,10 @@ $(function() {
 
     async function orderItems() {
         await $grid.packery();
-        console.log($('.masonry').packery("getItemElements"))
         var itemElems = $grid.packery("getItemElements");
         var data = itemElems.map(function(el, i) {
             return i , $(el).attr('id').replace("attachment_", "")
         });
-        console.log(data);
         $.ajax({
             url: $(this).data("url"),
             type: "PATCH",

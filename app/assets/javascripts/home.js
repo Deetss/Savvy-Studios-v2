@@ -30,7 +30,6 @@ document.addEventListener("turbolinks:load", function() {
 
     $('.event-type').change(function(){
         var eventType = $('.event-type').val()
-        console.log(eventType)
         if (eventType == "1") {
             $('.picker').datepicker('setDaysOfWeekDisabled', [1,2,3,4]);
         } else {
@@ -40,8 +39,6 @@ document.addEventListener("turbolinks:load", function() {
 
     $(".contact_form").submit(function(event) {
         var form = $(this);
-
-        console.log(form)
 
         if (form[0].checkValidity() === false){
             event.preventDefault();
@@ -56,5 +53,4 @@ document.addEventListener("turbolinks:load", function() {
 
         form.addClass('was-validated');
     })
-
-  })
+})

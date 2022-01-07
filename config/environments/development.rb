@@ -46,6 +46,7 @@ Rails.application.configure do
   :enable_starttls_auto => true
   }
 
+  #config.hosts = "e745-107-138-131-51.ngrok.io"
 
   config.action_mailer.default_url_options  = { host: 'localhost', port: 3000 }
 
@@ -68,7 +69,7 @@ Rails.application.configure do
   config.serve_static_assets = false
 
   # Suppress logger output for asset requests.
-  config.assets.quiet = true
+  config.assets.quiet = false
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
