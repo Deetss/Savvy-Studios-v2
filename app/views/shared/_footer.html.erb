@@ -2,10 +2,12 @@
     <hr>
     <div class="row justify-content-around align-items-center text-center">
         <div class="col mx-auto">
-            Copyright 2020 <i class="fa fa-copyright"></i> 
+            Copyright <%= Time.zone.now.year %> <i class="fa fa-copyright"></i> 
         </div>
         <div class="col">
+        <%= link_to root_path, class: "navbar-brand m-auto" do %>
             <%= image_tag 'logo.png', class: "img-fluid mx-auto", alt: "Savy Studios Logo" %>
+        <% end %>
         </div>
         <div class="col mx-auto">
             <div class="row justify-content-around">
